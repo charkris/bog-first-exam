@@ -9,6 +9,10 @@
     margin: auto;
 }
 
+:root {
+    --shout-margin: 50px 0;
+}
+
 /** HEADER **/
 
 .top-header-text {
@@ -86,6 +90,12 @@
     height: 380px;
 }
 
+.shout-and-splitter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .shout {
     font-size: 28px;
     line-height: 28px;
@@ -98,5 +108,34 @@
     width: 800px;
     height: 3px;
     background-color: #e8e8e8;
+    margin: var(--shout-margin);
+
 }
 
+/** WORKS **/
+
+.works-and-splitter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.works {
+    display: flex;
+
+}
+
+.works-img {
+    width: 225px;
+    height: 140px;
+    background-color: #333333;
+}
+
+.work-txt {
+    width: 197px;
+    height: 56px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #666666;
+    font-family: "Georgia";
+}
