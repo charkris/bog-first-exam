@@ -14,6 +14,9 @@
     --shout-margin: 50px 0;
     --font-px: 12px;
     --main-font: "Georgia";
+    --header-footer-color: #222222;
+    --light-grey: #666666;
+    --link-color: #7c9c37;
 }
 
 /** HEADER **/
@@ -32,6 +35,7 @@
 .header-search {
     width: 210px;
     height: 25px;
+    padding-left: 10px;
     border-radius: 13px;
     background-color: #e1e1e1;
     border: none;
@@ -76,16 +80,17 @@
 }
 
 .main-header {
-    background-color: #222222;
-    border-bottom: 2px solid #7c9c37;
+    background-color: var(--header-footer-color);
+    border-bottom: 2px solid var(--link-color);
 }
 
-.main-heading {
+.main-heading, .main-heading>a {
     font-size: 20px;
     line-height: 36px;
     color: #ffffff;
     font-family: var(--main-font);
     margin: 20px 0;
+    text-decoration: none;
 }
 
 .main-heading-cap {
@@ -145,7 +150,7 @@
 }
 
 #homepage {
-    color: #7c9c37;
+    color: var(--link-color);
 }
 
 /** SLIDER **/
@@ -250,7 +255,7 @@
 .work-heading {
     font-size: 18px;
     line-height: 22px;
-    color: #7c9c37;
+    color: var(--link-color);
     font-family: var(--main-font);
     padding: 20px 0;
 }
@@ -258,7 +263,7 @@
 .work-txt {
     font-size: var(--font-px);
     line-height: 19px;
-    color: #666666;
+    color: var(--light-grey);
     font-family: var(--main-font);
     padding: 0 15px 15px 15px;
 }
@@ -272,7 +277,7 @@
 .service-heading {
     font-size: 18px;
     line-height: 22px;
-    color: #666666;
+    color: var(--light-grey);
     font-family: var(--main-font);
 }
 
@@ -282,6 +287,10 @@
     color: #7b9b37;
     font-family: var(--main-font);
     text-decoration: none;
+}
+
+.service-section {
+    margin-bottom: 50px;
 }
 
 .service-section-wrapper {
@@ -310,7 +319,7 @@
 .service-article-heading {
     font-size: 14px;
     line-height: 17px;
-    color: #7c9c37;
+    color: var(--link-color);
     font-family: var(--main-font);
     margin: 20px 0;
 }
@@ -320,7 +329,7 @@
     height: 98px;
     font-size: 13px;
     line-height: 21px;
-    color: #666666;
+    color: var(--light-grey);
     font-family: var(--main-font);
 }
 
@@ -350,9 +359,103 @@
 .person-full-name {
     font-size: 13px;
     line-height: 16px;
-    color: #666666;
+    color: var(--light-grey);
     font-family: var(--main-font);
 }
+
+/** FOOTER **/
+
+.footer-section {
+    background-color: var(--header-footer-color);
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.footer-heading {
+    font-size: var(--font-px);
+    line-height: 14px;
+    color: var(--light-grey);
+    font-family: var(--main-font);
+}
+
+.footer-image {
+    width: 215px;
+    height: 90px;
+    background-color: white;
+}
+
+.about-us-article {
+    width: 209px;
+    height: 89px;
+    font-size: var(--font-px);
+    line-height: 19px;
+    color: var(--light-grey);
+    font-family: var(--main-font);
+}
+
+.footer-ul {
+    list-style: none;
+}
+
+.footer-ul-links>a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 28px;
+    color: var(--link-color);
+    font-family: var(--main-font);
+}
+
+.footer-ul-links {
+    border-bottom: 1px solid #3a3a3a;
+    padding-bottom: 8px;
+    border-width: max-content;
+}
+
+.post-paragraph, .post-title, .blog-text {
+    /* width: 223px;
+    height: 83px; */
+    font-size: var(--font-px);
+    line-height: 17px;
+    color: var(--light-grey);
+    font-family: var(--main-font);
+}
+
+.post-title {
+    font-size: 14px;
+}
+
+.blog-text {
+    font-size: 10px;
+}
+
+.footer-line {
+    border-top: 1px solid black;
+}
+
+.copyright-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-size: var(--font-px);
+    line-height: 14px;
+    color: var(--light-grey);
+    font-family: var(--main-font);
+}
+
+.footer-mark {
+    font-size: var(--font-px);
+    line-height: 14px;
+    color: var(--light-grey);
+    font-family: var(--main-font);
+}
+
+
 
 
 /** MEDIA QUERY **/
@@ -364,14 +467,11 @@
     .top-header-text {
         flex-direction: column;
     }
-    .header-search {
-        width: 30px;
-    }
     .navigation-buttons {
         display: none;
     }
     .splitter {
-        display: none;
+        width: 90%;
     }
     .works-wrapper {
         flex-wrap: wrap;
@@ -383,5 +483,11 @@
     }  
     .service-section-wrapper, .service-person-imgs {
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .wrap-services-article {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
