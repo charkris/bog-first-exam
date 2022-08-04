@@ -45,7 +45,7 @@
     outline: none;
     position: absolute;
     right: 0px;
-    top: 4px;
+    top: 5px;
 }
 
 .search-icon {
@@ -59,7 +59,7 @@
     align-items: center;
     position: absolute;
     right: 6px;
-    top: 7px;
+    top: 8px;
 }
 
 .search-icon-border {
@@ -138,11 +138,17 @@
 }
 
 .nav-btn>a {
+    display: flex;
+    flex-direction: column;
     line-height: 12px;
     text-decoration: none;
     font-size: var(--font-px);
     color: var(--header-color);
     font-family: var(--main-font);
+}
+
+.nav-btn>a>.nav-btn-txt:hover {
+    color: var(--link-color);
 }
 
 .nav-btn-sub-txt {
@@ -156,10 +162,6 @@
     width: 1px;
     height: 32px;
     background-color: #828282;
-}
-
-#homepage {
-    color: var(--link-color);
 }
 
 /** SLIDER **/
