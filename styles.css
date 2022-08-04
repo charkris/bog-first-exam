@@ -17,6 +17,9 @@
     --header-footer-color: #222222;
     --light-grey: #666666;
     --link-color: #7c9c37;
+    --header-color: #ffffff;
+    --footer-color: #3a3a3a;
+    --border-color: #000000;
 }
 
 /** HEADER **/
@@ -25,11 +28,11 @@
     font-size: var(--font-px);
     line-height: 19px;
     color: #696969;
-    font-family: "Georgia";
+    font-family: var(--main-font);
 }
 
 .header-contact {
-    margin-right: 50px
+    margin-right: 50px;
 }
 
 .header-search {
@@ -66,7 +69,7 @@
     width: 19px;
     height: 19px;
     border-radius: 100%;
-    background-color: black;
+    background-color: var(--border-color);
 }
 
 .top-header-wrapper {
@@ -87,7 +90,7 @@
 .main-heading, .main-heading>a {
     font-size: 20px;
     line-height: 36px;
-    color: #ffffff;
+    color: var(--header-color);
     font-family: var(--main-font);
     margin: 20px 0;
     text-decoration: none;
@@ -101,7 +104,7 @@
 .heading-sub-text{
     font-size: var(--font-px);
     line-height: 12px;
-    color: #ffffff;
+    color: var(--header-color);
     font-family: var(--main-font);
     font-weight: normal;
 }
@@ -135,10 +138,10 @@
 }
 
 .nav-btn>a {
+    line-height: 12px;
     text-decoration: none;
     font-size: var(--font-px);
-    line-height: 12px;
-    color: #ffffff;
+    color: var(--header-color);
     font-family: var(--main-font);
 }
 
@@ -195,7 +198,7 @@
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    background-color: black;
+    background-color: var(--border-color);
 }
 
 .arrow-left, .arrow-right {
@@ -338,7 +341,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e2e2e2;;
+    border-bottom: 1px solid #e2e2e2;
     padding-bottom: 10px;
 }
 
@@ -435,7 +438,7 @@
     height: 90px;
     margin-bottom: 10px;
     padding: 5px;
-    border: 1px solid #3a3a3a;
+    border: 1px solid var(--footer-color);
 }
 
 .about-us-article {
@@ -461,18 +464,16 @@
     font-size: 12px;
     color: var(--link-color);
     font-family: var(--main-font);
-    padding-left: 5px
+    padding-left: 5px;
 }
 
 .footer-ul-links {
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid var(--footer-color);
     padding: 3px 0 5px 0;
     border-width: max-content;
 }
 
 .post-paragraph, .post-title, .blog-text {
-    /* width: 223px;
-    height: 83px; */
     font-size: var(--font-px);
     line-height: 17px;
     color: var(--light-grey);
@@ -538,7 +539,7 @@
 }
 
 .footer-line {
-    border-top: 1px solid black;
+    border-top: 1px solid var(--border-color);
 }
 
 .copyright-wrapper {
@@ -560,8 +561,6 @@
     color: var(--light-grey);
     font-family: var(--main-font);
 }
-
-
 
 
 /** MEDIA QUERY **/
