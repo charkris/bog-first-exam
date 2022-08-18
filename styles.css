@@ -147,7 +147,11 @@
     font-family: var(--main-font);
 }
 
-.nav-btn>a>.nav-btn-txt:hover {
+/* .nav-btn>a>.nav-btn-txt:hover {
+    color: var(--link-color);
+} */
+
+.active {
     color: var(--link-color);
 }
 
@@ -172,6 +176,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 380px;
+}
+
+#slider-image {
+    display: flex;
+    justify-content: center;
 }
 
 .arrow-left-wrapper, .arrow-right-wrapper {
